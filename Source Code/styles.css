@@ -1,0 +1,78 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #f0f4f8; /* Light background for general content */
+}
+
+/* Parallax Section Base Styles */
+.parallax-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Key for parallax effect */
+    /* Removed scroll-snap-align here to allow smooth scrolling within content sections */
+}
+
+/* Specific Background Images for Parallax Sections */
+.parallax-bg-1 {
+    background-image: url('https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg');
+}
+.parallax-bg-2 {
+    background-image: url('https://images.pexels.com/photos/32058672/pexels-photo-32058672.jpeg');
+}
+.parallax-bg-3 {
+    background-image: url('https://images.pexels.com/photos/213172/pexels-photo-213172.jpeg');
+}
+.parallax-bg-4 {
+    background-image: url('https://images.pexels.com/photos/2260835/pexels-photo-2260835.jpeg');
+}
+
+/* Overlay for better text readability on parallax sections */
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Content within parallax section to be above overlay */
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly visible background for content box */
+}
+
+/* Regular Content Sections */
+.content-section {
+    padding: 6rem 2rem;
+    background-color: #ffffff;
+    color: #334155;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05), 0 5px 15px rgba(0,0,0,0.05); /* Subtle shadow for separation */
+}
+
+.content-section:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Scroll Snap for smooth scrolling between sections (optional but nice) */
+html {
+    scroll-behavior: smooth;
+    /* Removed scroll-snap-type: y mandatory; to allow free scrolling */
+}
